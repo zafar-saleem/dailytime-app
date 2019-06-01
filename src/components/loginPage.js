@@ -9,11 +9,11 @@ class LoginPage extends Component {
   onHandleLogin = (event) => {
     event.preventDefault();
 
-    let email = event.target.email.value;
+    let username = event.target.username.value;
     let password = event.target.password.value;
 
     const data = {
-      email, password
+      username, password
     };
 
     this.props.dispatch(loginUserAction(data));
@@ -37,8 +37,8 @@ class LoginPage extends Component {
         {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
         <form onSubmit={this.onHandleLogin}>
           <div>
-            <label>Email</label>
-            <input type="email" name="email" />
+            <label>Username</label>
+            <input type="text" name="username" />
           </div>
           <div>
             <label>Password</label>

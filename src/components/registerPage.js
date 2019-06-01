@@ -9,11 +9,11 @@ class RegisterPage extends Component {
     event.preventDefault();
 
     let name = event.target.name.value;
-    let email = event.target.email.value;
+    let username = event.target.username.value;
     let password = event.target.password.value;
 
     const data = {
-      name, email, password
+      name, username, password
     };
 
     this.props.dispatch(registerUserAction(data));
@@ -37,8 +37,8 @@ class RegisterPage extends Component {
             <input type="text" name="name" />
           </div>
           <div>
-            <label>Email</label>
-            <input type="email" name="email" />
+            <label>Username</label>
+            <input type="text" name="username" />
           </div>
           <div>
             <label>Password</label>
