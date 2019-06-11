@@ -28,27 +28,29 @@ class RegisterPage extends Component {
     }
     
     return (
-      <div>
-        <h3>RegisterPage</h3>
+      <div className="auth-container">
+        <h3 className="page-title">Register</h3>
         {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
         <form onSubmit={this.onHandleRegistration}>
           <div>
-            <label>Name</label>
-            <input type="text" name="name" />
+            <label className="labels" for="name">Name</label>
+            <input type="text" name="name" className="fields" id="name" />
           </div>
           <div>
-            <label>Username</label>
-            <input type="text" name="username" />
+            <label className="labels" for="username">Username</label>
+            <input type="text" name="username" className="fields" id="username" />
           </div>
           <div>
-            <label>Password</label>
-            <input type="password" name="password" />
+            <label className="labels">Password</label>
+            <input type="password" name="password" className="fields" id="password" />
           </div>
           <div>
-            <button>Register</button>
+            <button className="btn btn-register">Register</button>
           </div>
         </form>
-        Already have account? <Link to='login'>Login here</Link>
+        <span className="common login">
+          Already have account? <Link to='login'>Login here</Link>
+        </span>
       </div>
     )
   }

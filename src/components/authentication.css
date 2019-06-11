@@ -1,4 +1,4 @@
-.login-container {
+.auth-container {
   position: absolute;
   margin: auto;
   top: 0;
@@ -45,10 +45,17 @@ form {
   border: 1px solid #cbcccd;
 }
 
-.forgot {
+.common {
   display: block;
   position: absolute;
-  bottom: 50px;
-  left: 0;
   font-size: .8em;
+  left: 0;
+}
+
+.forgot {
+  bottom: 50px;
+}
+
+.login {
+  bottom: -30px;
 }

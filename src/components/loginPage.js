@@ -36,7 +36,7 @@ class LoginPage extends Component {
     }
 
     return (
-      <div className="login-container">
+      <div className="auth-container">
         <h3 className="page-title">Login</h3>
         {
           (isSuccess && getCookie('role') === 'Admin')
@@ -66,7 +66,7 @@ class LoginPage extends Component {
             <button className="btn btn-login">Login</button>
           </div>
         </form>
-        <span className="forgot">
+        <span className="common forgot">
           Don't have account? <Link to='register'>Register here</Link>
         </span>
       </div>
