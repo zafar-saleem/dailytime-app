@@ -25,7 +25,7 @@ const Header = ({ match }) => (
       <li><Link to={`${match.path}/profile`}>Profile</Link></li>
       <li><Link to={`${match.path}/logout`}>Logout</Link></li>
     </ul>
-    <div>Welcome {getCookie('name')}</div>
+    <div>Welcome {getCookie('role')}</div>
     <Route path={`${match.path}/list`} component={List} />
     <Route path={`${match.path}/new`} component={New} />
   </div>
