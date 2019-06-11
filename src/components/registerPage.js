@@ -30,7 +30,7 @@ class RegisterPage extends Component {
     return (
       <div className="auth-container">
         <h3 className="page-title">Register</h3>
-        {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
+        {!isSuccess ? <div className="error">{message}</div> : <Redirect to='login' />}
         <form onSubmit={this.onHandleRegistration}>
           <div>
             <label className="labels" for="name">Name</label>

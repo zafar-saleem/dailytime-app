@@ -50,7 +50,7 @@ class LoginPage extends Component {
             ?
             <Redirect to='/manager' />
             :
-            <div>{message}</div>
+            <div className="error">{message}</div>
             ))
         }
         <form onSubmit={this.onHandleLogin}>
