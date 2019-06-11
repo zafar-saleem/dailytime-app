@@ -9,7 +9,7 @@ import PrivateRoute from './privateRoute';
 import LoginPage from '../components/loginPage';
 import RegisterPage from '../components/registerPage';
 import DashboardPage from '../components/dashboardPage';
-import List from '../components/admin/listComponent';
+import Header from '../components/common/header';
 
 class App extends Component {
   render() {
@@ -20,8 +20,8 @@ class App extends Component {
             <Route path='/' exact={true} component={LoginPage} />
             <Route path='/login' component={LoginPage} />
             <Route path='/register' component={RegisterPage} />
-            <PrivateRoute path='/admin' component={List} />
-            <PrivateRoute path='/dashboard' component={DashboardPage} />
+            <PrivateRoute path='/admin' component={Header} />
+            <PrivateRoute path='/dashboard' component={Header} />
           </Switch>
         </div>
       </BrowserRouter>
