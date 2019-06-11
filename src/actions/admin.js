@@ -12,3 +12,9 @@ export const employeesListAction = () => {
     type: types.FETCH_EMPLOYEES_LIST
   }
 };
+
+export const adminProfileAction = () => {
+  return {
+    type: types.FETCH_ADMIN_PROFILE
+  }
+};
