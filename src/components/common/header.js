@@ -3,9 +3,9 @@ import { Link, Route } from 'react-router-dom';
 
 // import Employees from '../../admin/employees/employeesComponent';
 import New from '../admin/newComponent';
-// import Profile from '../../admin/profile/profileComponent';
-// import Logout from '../../logoutComponent';
+import Profile from '../admin/profileComponent';
 import List from '../admin/listComponent';
+// import Logout from '../../logoutComponent';
 // import Project from '../../employees/project/createProjectComponent';
 import { getCookie } from '../../utils/cookies';
 
@@ -28,6 +28,7 @@ const Header = ({ match }) => (
     <div>Welcome {getCookie('role')}</div>
     <Route path={`${match.path}/list`} component={List} />
     <Route path={`${match.path}/new`} component={New} />
+    <Route path={`${match.path}/profile`} component={Profile} />
   </div>
 );
 
