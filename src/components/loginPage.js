@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { loginUserAction } from '../actions/authenticationActions';
 import { setCookie, getCookie } from '../utils/cookies';
 
+import './authentication.css';
+
 class LoginPage extends Component {
   onHandleLogin = (event) => {
     event.preventDefault();
@@ -34,8 +36,8 @@ class LoginPage extends Component {
     }
 
     return (
-      <div>
-        <h3>Login Page</h3>
+      <div className="login-container">
+        <h3 className="page-title">Login</h3>
         {
           (isSuccess && getCookie('role') === 'Admin')
           ?
@@ -53,18 +55,20 @@ class LoginPage extends Component {
         }
         <form onSubmit={this.onHandleLogin}>
           <div>
-            <label>Username</label>
-            <input type="text" name="username" />
+            <label className="labels" for="username">Username</label>
+            <input type="text" name="username" className="fields" id="username" />
           </div>
           <div>
-            <label>Password</label>
-            <input type="password" name="password" />
+            <label className="labels" for="password">Password</label>
+            <input type="password" name="password" className="fields" id="password" />
           </div>
           <div>
-            <button>Login</button>
+            <button className="btn btn-login">Login</button>
           </div>
         </form>
-        Don't have account? <Link to='register'>Register here</Link>
+        <span className="forgot">
+          Don't have account? <Link to='register'>Register here</Link>
+        </span>
       </div>
     );
   }
