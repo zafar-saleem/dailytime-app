@@ -6,3 +6,9 @@ export const newEmployeeAction = (employee) => {
     employee
   }
 };
+
+export const employeesListAction = () => {
+  return {
+    type: types.FETCH_EMPLOYEES_LIST
+  }
+};
