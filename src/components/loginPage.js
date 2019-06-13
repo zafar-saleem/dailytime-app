@@ -55,11 +55,11 @@ class LoginPage extends Component {
         }
         <form onSubmit={this.onHandleLogin}>
           <div>
-            <label className="labels" for="username">Username</label>
+            <label className="labels" htmlFor="username">Username</label>
             <input type="text" name="username" className="fields" id="username" />
           </div>
           <div>
-            <label className="labels" for="password">Password</label>
+            <label className="labels" htmlFor="password">Password</label>
             <input type="password" name="password" className="fields" id="password" />
           </div>
           <div>
