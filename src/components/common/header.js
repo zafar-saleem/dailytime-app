@@ -9,9 +9,11 @@ import List from '../admin/listComponent';
 // import Project from '../../employees/project/createProjectComponent';
 import { getCookie } from '../../utils/cookies';
 
+import './header.css';
+
 const Header = ({ match }) => (
   <div>
-    <ul>
+    <ul className="navigation">
       <li><Link to={`${match.path}/list`}>Employees</Link></li>
       <li>
         {
@@ -24,8 +26,8 @@ const Header = ({ match }) => (
       </li>
       <li><Link to={`${match.path}/profile`}>Profile</Link></li>
       <li><Link to={`${match.path}/logout`}>Logout</Link></li>
+      <li>Welcome {getCookie('role')}</li>
     </ul>
-    <div>Welcome {getCookie('role')}</div>
     <Route path={`${match.path}/list`} component={List} />
     <Route path={`${match.path}/new`} component={New} />
     <Route path={`${match.path}/profile`} component={Profile} />
