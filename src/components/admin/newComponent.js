@@ -57,7 +57,7 @@ class New extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <div className={(this.state.success) ? 'success' : 'error'}>{this.state.message}</div>
         <form onSubmit={this.onSaveNewEmployee.bind(this)}>
           <div>

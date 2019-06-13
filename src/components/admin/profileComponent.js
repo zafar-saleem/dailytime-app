@@ -33,7 +33,7 @@ class Profile extends Component {
       return <div>No Profile Found</div>
     }
     return (
-      <div>
+      <div className="container">
         <table>
           <thead>
             <tr>
