@@ -14,9 +14,11 @@ code {
 }
 
 .container {
-  width: 80%;
+  margin: auto;
+  width: 1400px;
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 0;
+  left: 0;
   bottom: 0;
 }
