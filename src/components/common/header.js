@@ -12,14 +12,14 @@ import { getCookie } from '../../utils/cookies';
 import './header.css';
 
 const Header = ({ match }) => (
-  <div>
+  <div className="navigation-container">
     <ul className="navigation">
       <li><Link to={`${match.path}/list`}>Employees</Link></li>
       <li>
         {
           (getCookie('role') === 'Admin')
           ?
-          <Link to={`${match.path}/new`}>New</Link>
+          <Link to={`${match.path}/new`}>New Employee</Link>
           :
           <Link to={`${match.path}/create`}>Create Project</Link>
         }

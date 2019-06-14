@@ -1,9 +1,10 @@
-.navigation {
-  position: fixed;
-  top: 10%;
+.navigation-container {
+  display: inline-block;
 }
 
 .navigation {
+  position: fixed;
+  top: 10%;
   padding: 0;
   margin: 0;
 }
