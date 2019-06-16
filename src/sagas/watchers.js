@@ -12,4 +12,5 @@ export default function* watchUserAuthentication() {
   yield takeLatest(types.LOGIN_USER, loginSaga);
   yield takeLatest(types.FETCH_EMPLOYEES_LIST, listSaga);
   yield takeLatest(types.FETCH_ADMIN_PROFILE, profileSaga);
+  yield takeLatest(types.ON_SAVE_NEW_EMPLOYEE, newSaga);
 }
