@@ -7,7 +7,7 @@ import Profile from '../admin/profileComponent';
 import List from '../admin/listComponent';
 // import Logout from '../../logoutComponent';
 
-import Home from '../employees/homeComponent';
+import Hours from '../employees/hoursComponent';
 import { getCookie } from '../../utils/cookies';
 
 import './header.css';
@@ -35,6 +35,7 @@ const Header = ({ match }) => (
     <Route path={`${match.path}/list`} component={List} />
     <Route path={`${match.path}/new`} component={New} />
     <Route path={`${match.path}/home`} component={Profile} />
+    <Route path={`${match.path}/hours`} component={Hours} />
   </div>
 );
 
