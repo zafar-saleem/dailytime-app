@@ -27,7 +27,8 @@ class Hours extends Component {
         date: event.target.date.value,
         startTime: event.target.startTime.value,
         finishTime: event.target.finishTime.value,
-        tasks: event.target.tasks.value
+        tasks: event.target.tasks.value,
+        userid: getCookie('id')
       }
     }, () => {
       this.props.dispatch(fileHoursAction({
