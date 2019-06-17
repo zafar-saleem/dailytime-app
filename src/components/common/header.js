@@ -3,7 +3,7 @@ import { Link, Route } from 'react-router-dom';
 
 // import Employees from '../../admin/employees/employeesComponent';
 import New from '../admin/new/newComponent';
-import Profile from '../admin/profileComponent';
+import Profile from '../admin/profile/profileComponent';
 import Details from '../admin/details/detailsComponent';
 import List from '../admin/list/listComponent';
 import Logout from '../logoutPage';
