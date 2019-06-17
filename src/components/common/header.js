@@ -36,6 +36,7 @@ const Header = ({ match }) => (
     <Route path={`${match.path}/list`} component={List} />
     <Route path={`${match.path}/new`} component={New} />
     <Route path={`${match.path}/home`} component={Profile} />
+    <Route path={`${match.path}/profile`} component={Profile} />
     <Route path={`${match.path}/hours`} component={Hours} />
     <Route path={`${match.path}/logout`} component={Logout} />
     <Route path={`${match.path}/list/employees/details/:id`} component={Details} />
