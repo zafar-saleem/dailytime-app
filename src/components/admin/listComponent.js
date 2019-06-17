@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 import { employeesListAction } from '../../actions/admin';
-import Details from './detailsComponent';
+import Details from './details/detailsComponent';
 
 class List extends Component {
   state = {
