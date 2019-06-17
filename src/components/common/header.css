@@ -1,9 +1,9 @@
-.navigation-container {
-  display: inline-block;
+.main-container {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .navigation {
-  position: fixed;
   top: 10%;
   padding: 0;
   margin: 0;

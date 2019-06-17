@@ -12,7 +12,7 @@ import { getCookie } from '../../utils/cookies';
 import './header.css';
 
 const Header = ({ match }) => (
-  <div className="navigation-container">
+  <div className="main-container">
     <ul className="navigation">
       <li><Link to={`${match.path}/list`}>Employees</Link></li>
       <li>

@@ -41,7 +41,7 @@ class List extends Component {
     }
     
     return (
-      <div>
+      <div className="container">
         <h1>Employees</h1>
         <table>
           <thead>
