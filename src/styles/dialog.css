@@ -1,5 +1,5 @@
 .backdrop {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   background: #000;
   width: 100%;
@@ -12,8 +12,8 @@
 .dialog {
   position: absolute;
   margin: auto;
-  width: 300px;
-  height: 100px;
+  width: 80%;
+  height: 80%;
   padding: 2em;
   top: 0;
   right: 0;
