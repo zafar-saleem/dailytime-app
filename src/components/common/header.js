@@ -5,7 +5,7 @@ import { Link, Route } from 'react-router-dom';
 import New from '../admin/newComponent';
 import Profile from '../admin/profileComponent';
 import List from '../admin/listComponent';
-// import Logout from '../../logoutComponent';
+import Logout from '../logoutPage';
 
 import Hours from '../employees/hoursComponent';
 import { getCookie } from '../../utils/cookies';
@@ -36,6 +36,7 @@ const Header = ({ match }) => (
     <Route path={`${match.path}/new`} component={New} />
     <Route path={`${match.path}/home`} component={Profile} />
     <Route path={`${match.path}/hours`} component={Hours} />
+    <Route path={`${match.path}/logout`} component={Logout} />
   </div>
 );
 
