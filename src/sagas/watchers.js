@@ -2,6 +2,7 @@ import { takeLatest } from 'redux-saga/effects';
 import { registerSaga, loginSaga } from './authenticationSaga';
 import { newSaga } from './admin/newSaga';
 import { listSaga } from './admin/listSaga';
+import { detailSaga } from './admin/detailSaga';
 import { profileSaga } from './admin/profileSaga';
 import { hoursSaga } from './employees/hoursSaga';
 
@@ -15,4 +16,5 @@ export default function* watchUserAuthentication() {
   yield takeLatest(types.FETCH_ADMIN_PROFILE, profileSaga);
   yield takeLatest(types.ON_SAVE_NEW_EMPLOYEE, newSaga);
   yield takeLatest(types.ON_FILE_MY_HOURS, hoursSaga);
+  yield takeLatest(types.FETCH_EMPLOYEE_DETAILS, detailSaga);
 }

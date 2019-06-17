@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 
 import { employeesListAction } from '../../actions/admin';
+import Details from './detailsComponent';
 
 class List extends Component {
   state = {
@@ -18,6 +19,9 @@ class List extends Component {
 
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
     this.props.dispatch(employeesListAction());
   }
 
@@ -29,7 +33,7 @@ class List extends Component {
     }
 
     return {
-      employees: undefined,
+      employees: [],
       success: undefined,
       message: undefined
     }
@@ -39,6 +43,8 @@ class List extends Component {
     if (this.state.employees === undefined || this.state.employees.length === 0) {
       return <div>No Employees</div>
     }
+
+    const { match } = this.props;
     
     return (
       <div className="container">
@@ -52,20 +58,20 @@ class List extends Component {
             </tr>
           </thead>
           <tbody>
-          {this.state.employees.map(li => (
-            <tr key={li._id}>
-              <td>
-                <Link className='name uppercase' to={`/employee/details/${li._id}`}>{li.name}</Link>
-              </td>
-              <td>
-                <Link className='name' to={`/employee/details/${li._id}`}>{li.username}</Link>
-              </td>
-              <td className='uppercase'>
-                {li.position}
-              </td>
-            </tr>
-          ))}
-        </tbody>
+            {this.state.employees.map(li => (
+              <tr key={li._id}>
+                <td>
+                  <Link className='name' to={`${match.path}/employees/details/${li._id}`}>{li.name}</Link>
+                </td>
+                <td>
+                  <Link className='name' to={`${match.path}/employees/details/${li._id}`}>{li.username}</Link>
+                </td>
+                <td className='uppercase'>
+                  {li.position}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     );

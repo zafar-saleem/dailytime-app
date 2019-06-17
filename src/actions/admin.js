@@ -18,3 +18,10 @@ export const adminProfileAction = () => {
     type: types.FETCH_ADMIN_PROFILE
   }
 };
+
+export const employeeDetailsAction = (id) => {
+  return {
+    type: types.FETCH_EMPLOYEE_DETAILS,
+    id
+  }
+};

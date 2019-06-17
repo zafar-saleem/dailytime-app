@@ -4,6 +4,7 @@ import { Link, Route } from 'react-router-dom';
 // import Employees from '../../admin/employees/employeesComponent';
 import New from '../admin/newComponent';
 import Profile from '../admin/profileComponent';
+import Details from '../admin/detailsComponent';
 import List from '../admin/listComponent';
 import Logout from '../logoutPage';
 
@@ -37,6 +38,7 @@ const Header = ({ match }) => (
     <Route path={`${match.path}/home`} component={Profile} />
     <Route path={`${match.path}/hours`} component={Hours} />
     <Route path={`${match.path}/logout`} component={Logout} />
+    <Route path={`${match.path}/list/employees/details/:id`} component={Details} />
   </div>
 );
 
