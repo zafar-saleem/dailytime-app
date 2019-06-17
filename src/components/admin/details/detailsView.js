@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 
-const detailsView = ({ name, email, username, role, position }) => (
+const detailsView = ({ employee }) => (
   <div className="dialog">
     <table>
       <tbody>
         <tr>
-          <th>Name</th><td>{name}</td>
+          <th>Name</th><td>{employee.name}</td>
         </tr>
         <tr>
-          <th>Email</th><td>{email}</td>
+          <th>Email</th><td>{employee.email}</td>
         </tr>
         <tr>
-          <th>Username</th><td>{username}</td>
+          <th>Username</th><td>{employee.username}</td>
         </tr>
         <tr>
-          <th>Role</th><td>{role}</td>
+          <th>Role</th><td>{employee.role}</td>
         </tr>
         <tr>
-          <th>Position</th><td>{position}</td>
+          <th>Position</th><td>{employee.position}</td>
         </tr>
       </tbody>
     </table>
