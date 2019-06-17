@@ -38,7 +38,14 @@ class New extends Component {
         employee: this.state.employee,
         access: this.state.access
       }));
-    })
+    });
+
+    event.target.name.value = '';
+    event.target.email.value = '';
+    event.target.username.value = '';
+    event.target.password.value = '';
+    event.target.role.value = '';
+    event.target.position.value = '';
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
