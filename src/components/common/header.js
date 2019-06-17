@@ -6,7 +6,8 @@ import New from '../admin/newComponent';
 import Profile from '../admin/profileComponent';
 import List from '../admin/listComponent';
 // import Logout from '../../logoutComponent';
-// import Project from '../../employees/project/createProjectComponent';
+
+import Home from '../employees/homeComponent';
 import { getCookie } from '../../utils/cookies';
 
 import './header.css';
@@ -26,14 +27,14 @@ const Header = ({ match }) => (
       :
       <ul className="navigation">
         <li><Link to={`${match.path}/home`}>Home</Link></li>
-        <li><Link to={`${match.path}/profile`}>Profile</Link></li>
+        <li><Link to={`${match.path}/hours`}>File Hours</Link></li>
         <li><Link to={`${match.path}/logout`}>Logout</Link></li>
         <li>Welcome {getCookie('role')}</li>
       </ul>
     }
     <Route path={`${match.path}/list`} component={List} />
     <Route path={`${match.path}/new`} component={New} />
-    <Route path={`${match.path}/profile`} component={Profile} />
+    <Route path={`${match.path}/home`} component={Profile} />
   </div>
 );
 
