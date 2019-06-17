@@ -5,7 +5,7 @@ import { Link, Route } from 'react-router-dom';
 import New from '../admin/newComponent';
 import Profile from '../admin/profileComponent';
 import Details from '../admin/details/detailsComponent';
-import List from '../admin/listComponent';
+import List from '../admin/list/listComponent';
 import Logout from '../logoutPage';
 
 import Hours from '../employees/hoursComponent';
