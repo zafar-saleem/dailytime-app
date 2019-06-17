@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { employeeDetailsAction } from '../../actions/admin';
+import { employeeDetailsAction } from '../../../actions/admin';
 
 import DetailsView from './detailsView';
 
