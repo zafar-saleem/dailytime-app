@@ -13,21 +13,24 @@ import './header.css';
 
 const Header = ({ match }) => (
   <div className="main-container">
-    <ul className="navigation">
-      <li><Link to={`${match.path}/list`}>Employees</Link></li>
-      <li>
-        {
-          (getCookie('role') === 'Admin')
-          ?
-          <Link to={`${match.path}/new`}>New Employee</Link>
-          :
-          <Link to={`${match.path}/create`}>Create Project</Link>
-        }
-      </li>
-      <li><Link to={`${match.path}/profile`}>Profile</Link></li>
-      <li><Link to={`${match.path}/logout`}>Logout</Link></li>
-      <li>Welcome {getCookie('role')}</li>
-    </ul>
+    {
+      (getCookie('role') === 'Admin')
+      ?
+      <ul className="navigation">
+        <li><Link to={`${match.path}/list`}>Employees</Link></li>
+        <li><Link to={`${match.path}/new`}>New Employee</Link></li>
+        <li><Link to={`${match.path}/profile`}>Profile</Link></li>
+        <li><Link to={`${match.path}/logout`}>Logout</Link></li>
+        <li>Welcome {getCookie('role')}</li>
+      </ul>
+      :
+      <ul className="navigation">
+        <li><Link to={`${match.path}/home`}>Home</Link></li>
+        <li><Link to={`${match.path}/profile`}>Profile</Link></li>
+        <li><Link to={`${match.path}/logout`}>Logout</Link></li>
+        <li>Welcome {getCookie('role')}</li>
+      </ul>
+    }
     <Route path={`${match.path}/list`} component={List} />
     <Route path={`${match.path}/new`} component={New} />
     <Route path={`${match.path}/profile`} component={Profile} />
