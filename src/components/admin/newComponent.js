@@ -61,28 +61,28 @@ class New extends Component {
         <div className={(this.state.success) ? 'success' : 'error'}>{this.state.message}</div>
         <form onSubmit={this.onSaveNewEmployee.bind(this)}>
           <div>
-            <label>Name</label>
-            <input type='text' name='name' />
+            <label htmlFor='name'>Name</label>
+            <input type='text' name='name' id='name' />
           </div>
           <div>
-            <label>Email</label>
-            <input type='email' name='email' />
+            <label htmlFor='email'>Email</label>
+            <input type='email' name='email' id='email' />
           </div>
           <div>
-            <label>Position</label>
-            <input type='text' name='position' />
+            <label htmlFor='position'>Position</label>
+            <input type='text' name='position' id='position' />
           </div>
           <div>
-            <label>Username</label>
-            <input type='text' name='username' />
+            <label htmlFor='username'>Username</label>
+            <input type='text' name='username' id='username' />
           </div>
           <div>
-            <label>Password</label>
-            <input type='password' name='password' />
+            <label htmlFor='password'>Password</label>
+            <input type='password' name='password' id='password' />
           </div>
           <div>
-            <label>Role</label>
-            <select name='role'>
+            <label htmlFor='role'>Role</label>
+            <select name='role' id='role'>
               <option>Select One</option>
               <option value='Employee'>Employee</option>
               <option value='Manager'>Manager</option>
