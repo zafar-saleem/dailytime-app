@@ -25,3 +25,10 @@ export const employeeDetailsAction = (id) => {
     id
   }
 };
+
+export const employeeUpdateAction = (id) => {
+  return {
+    type: types.UPDATE_EMPLOYEE_DETAILS,
+    id
+  }
+};

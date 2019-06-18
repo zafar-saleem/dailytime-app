@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@devexpress/dx-react-core": "^1.11.1",
+    "@devexpress/dx-react-scheduler": "^1.11.1",
+    "@devexpress/dx-react-scheduler-material-ui": "^1.11.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
