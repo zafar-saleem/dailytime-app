@@ -29,7 +29,6 @@ class Profile extends Component {
   }
 
   render() {
-    console.log('this.props')
     if (this.state.profile === undefined || this.state.profile.length === 0) {
       return <div>No Profile Found</div>
     }
