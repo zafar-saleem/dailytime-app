@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    document.title = 'Daily Hours';
+  }
+
   render() {
     return (
       <div className="App">
