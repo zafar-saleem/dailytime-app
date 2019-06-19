@@ -17,18 +17,4 @@ code {
     monospace;
 }
 
-a, .link {
-  cursor: pointer;
-  color: #37c5fc;
-  text-decoration: none;
-  border: 1px solid #fff;
-}
-
-.links {
-  margin-right: .5em;
-  font-size: .9em;
-}
-
-.container {
-  margin-top: 2em;
-}
+@import './styles/globals.css'
