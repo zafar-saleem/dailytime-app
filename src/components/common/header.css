@@ -15,6 +15,10 @@
   list-style-type: none;
 }
 
+.navigation li.last {
+  margin-top: 1em;
+}
+
 .navigation li a {
   text-decoration: none;
 }
