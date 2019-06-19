@@ -3,6 +3,8 @@ import { fileHoursAction } from '../../actions/employees';
 import { connect } from 'react-redux';
 import { getCookie } from '../../utils/cookies';
 
+import './hours.css';
+
 class Hours extends Component {
   state = {
     hours: {
@@ -54,25 +56,24 @@ class Hours extends Component {
 
   render() {
     return (
-      <div>
+      <div className="hours-container">
         <div className={(this.state.success) ? 'success' : 'error'}>{this.state.message}</div>
-        <h3>Enter Your Work Hours Below:</h3>
         <form onSubmit={this.onFileHours.bind(this)}>
           <div>
-            <label>Date</label>
-            <input type="date" name="date" />
+            <label htmlFor="date">Date</label>
+            <input type="date" name="date" id="date" />
           </div>
           <div>
-            <label>Start Time</label>
-            <input type="time" name="startTime" />
+            <label htmlFor="start-time">Start Time</label>
+            <input type="time" name="startTime" id="start-time" />
           </div>
           <div>
-            <label>Finish Time</label>
-            <input type="time" name="finishTime" />
+            <label htmlFor="finish-time">Finish Time</label>
+            <input type="time" name="finishTime" id="finish-time" />
           </div>
           <div>
-            <label>List of Tasks</label>
-            <textarea cols="40" rows="10" name="tasks"></textarea>
+            <label className="top" htmlFor="tasks">List of Tasks</label>
+            <textarea cols="40" rows="10" name="tasks" id="tasks"></textarea>
           </div>
           <div>
             <button>File My Hours</button>

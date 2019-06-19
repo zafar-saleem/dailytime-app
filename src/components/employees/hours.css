@@ -1,0 +1,19 @@
+.hours-container form label {
+  display: inline-block;
+  width: 6em;
+  padding: 1em;
+  margin-bottom: 3em;
+}
+
+.hours-container form input {
+  width: 30em;
+  padding: 1.5em;
+}
+
+.hours-container form textarea {
+  width: 32.8em;
+}
+
+.top {
+  vertical-align: top;
+}
