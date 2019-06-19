@@ -6,6 +6,8 @@ import {
   Link
 } from 'react-router-dom';
 
+import './list.css';
+
 class ListView extends Component {
   render() {
     return (
@@ -14,9 +16,10 @@ class ListView extends Component {
         <table>
           <thead>
             <tr>
-              <th><a href='#'>Name</a></th>
-              <th><a href='#' className='padding'>Username</a></th>
-              <th><a href='#' className='padding width'>Position</a></th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Position</th>
               <th></th>
             </tr>
           </thead>
@@ -29,10 +32,16 @@ class ListView extends Component {
                 <td>
                   <Link className='name' to={`${this.props.match.path}/employees/details/${li._id}`}>{li.username}</Link>
                 </td>
+                <td>
+                  <Link className='name' to={`${this.props.match.path}/employees/details/${li._id}`}>{li.email}</Link>
+                </td>
                 <td className='uppercase'>
                   {li.position}
                 </td>
-                <td><button onClick={() => this.props.onUpdateHandle({ id: li._id, name: li.name, username: li.username, email: li.email, position: li.position })}>Update</button></td>
+                <td>
+                  <button onClick={() => this.props.onUpdateHandle({ id: li._id, name: li.name, username: li.username, email: li.email, position: li.position })}>Update</button>
+                  <button onClick={() => this.props.onUpdateHandle({ id: li._id, name: li.name, username: li.username, email: li.email, position: li.position })}>Delete</button>
+                </td>
               </tr>
             ))}
           </tbody>

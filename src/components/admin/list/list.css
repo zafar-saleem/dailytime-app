@@ -1,0 +1,46 @@
+.main-container > div {
+  width: 100%;
+}
+
+table {
+  display: block;
+  width: 99%;
+}
+
+table thead {
+  display: block;
+  margin-bottom: .3em;
+  padding: .5em;
+  border-radius: .19em;
+  border: 1px solid #9b9c9d;
+}
+
+table thead tr {
+  display: block;
+  width: 100%;
+  padding: .5em;
+}
+
+table thead tr th {
+  width: 15em;
+  text-align: left;
+  font-weight: normal;
+}
+
+table tbody {
+  display: block;
+  padding: .5em;
+  border-radius: .19em;
+  border: 1px solid #9b9c9d;
+}
+
+table tbody tr {
+  display: block;
+  width: 98%;
+  padding: .5em;
+  border-bottom: 1px solid #9b9c9d;
+}
+
+table tbody tr td {
+  width: 15em;
+}
