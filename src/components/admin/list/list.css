@@ -1,24 +1,38 @@
 .main-container > div {
-  width: 100%;
-}
-
-table {
-  display: block;
   width: 99%;
 }
 
-table thead {
+table,
+table thead,
+table thead tr,
+table tbody,
+table tbody tr {
   display: block;
-  margin-bottom: .3em;
+}
+
+table thead,
+table thead tr,
+table tbody,
+table tbody tr {
   padding: .5em;
+}
+
+table thead,
+table tbody {
   border-radius: .19em;
   border: 1px solid #9b9c9d;
 }
 
+table {
+  width: 99%;
+}
+
+table thead {
+  margin-bottom: .3em;
+}
+
 table thead tr {
-  display: block;
   width: 100%;
-  padding: .5em;
 }
 
 table thead tr th {
@@ -27,17 +41,8 @@ table thead tr th {
   font-weight: normal;
 }
 
-table tbody {
-  display: block;
-  padding: .5em;
-  border-radius: .19em;
-  border: 1px solid #9b9c9d;
-}
-
 table tbody tr {
-  display: block;
   width: 98%;
-  padding: .5em;
   border-bottom: 1px solid #9b9c9d;
 }
 
