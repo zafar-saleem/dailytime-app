@@ -9,3 +9,22 @@
   width: 30em;
   padding: 1.5em;
 }
+
+.new-container .action-indicator {
+  display: inline-block;
+  margin-left: 1em;
+  font-size: .8em;
+  color: #CCC;
+}
+
+.new-container .show {
+  visibility: visible;
+}
+
+.new-container .hide {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}

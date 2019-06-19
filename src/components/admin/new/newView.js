@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './new.css';
 
-const newView = ({ success, message, onSaveNewEmployee }) => (
+const newView = ({ success, message, onSaveNewEmployee, onFocus, onBlur, isShow, onSubmit }) => (
   <div className="container new-container">
     <div className={(success) ? 'success' : 'error'}>{message}</div>
     <form onSubmit={onSaveNewEmployee}>
@@ -32,10 +32,11 @@ const newView = ({ success, message, onSaveNewEmployee }) => (
       </div>
       <div>
         <label htmlFor='password'>Password</label>
-        <input type='password' name='password' id='password' />
+        <input type='password' name='password' id='password' onClick={onFocus} onBlur={onBlur} onKeyDown={onSubmit} />
+        <span className={(isShow) ? 'action-indicator show' : 'action-indicator hide'}>Enter Password & Hit Enter to Save</span>
       </div>
       <div>
-        <button>Save</button>
+        <button className='hidden'>Save</button>
       </div>
     </form>
   </div>

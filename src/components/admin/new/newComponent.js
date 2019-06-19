@@ -19,7 +19,8 @@ class New extends Component {
       role: getCookie('role')
     },
     success: undefined,
-    message: undefined
+    message: undefined,
+    isShow: false
   }
 
   onSaveNewEmployee = event => {
@@ -49,6 +50,22 @@ class New extends Component {
     event.target.position.value = '';
   }
 
+  onFocus() {
+    this.setState({ isShow: true });
+  }
+
+  onBlur() {
+    this.setState({ isShow: false });
+  }
+
+  onSubmit(event) {
+    // 13 = enter
+    console.log(event.keyCode)
+    if (event.keyCode === 13) {
+      
+    }
+  }
+
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.newReducer.hasOwnProperty('response')) {
       return {
@@ -68,7 +85,11 @@ class New extends Component {
       <NewView
         success={this.state.success}
         message={this.state.message}
-        onSaveNewEmployee={this.onSaveNewEmployee.bind(this)} 
+        isShow={this.state.isShow}
+        onSaveNewEmployee={this.onSaveNewEmployee.bind(this)}
+        onFocus={this.onFocus.bind(this)}
+        onBlur={this.onBlur.bind(this)}
+        onSubmit={this.onSubmit.bind(this)}
       />
     );
   }
