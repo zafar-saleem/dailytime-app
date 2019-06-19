@@ -12,7 +12,6 @@ class ListView extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Employees</h1>
         <table>
           <thead>
             <tr>
