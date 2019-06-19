@@ -20,7 +20,7 @@ table tbody tr {
 table thead,
 table tbody {
   border-radius: .19em;
-  border: 1px solid #9b9c9d;
+  border: .1em solid #9b9c9d;
 }
 
 table {
@@ -43,9 +43,13 @@ table thead tr th {
 
 table tbody tr {
   width: 98%;
-  border-bottom: 1px solid #9b9c9d;
+  border-bottom: .1em solid #9b9c9d;
 }
 
 table tbody tr td {
   width: 15em;
+}
+
+.actions {
+  text-align: right;
 }

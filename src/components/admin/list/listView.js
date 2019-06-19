@@ -37,7 +37,7 @@ class ListView extends Component {
                 <td className='uppercase'>
                   {li.position}
                 </td>
-                <td>
+                <td className="actions">
                   <button onClick={() => this.props.onUpdateHandle({ id: li._id, name: li.name, username: li.username, email: li.email, position: li.position })}>Update</button>
                   <button onClick={() => this.props.onUpdateHandle({ id: li._id, name: li.name, username: li.username, email: li.email, position: li.position })}>Delete</button>
                 </td>
