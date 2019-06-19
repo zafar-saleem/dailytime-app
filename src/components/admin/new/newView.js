@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+import './new.css';
 
 const newView = ({ success, message, onSaveNewEmployee }) => (
-  <div className="container">
+  <div className="container new-container">
     <div className={(success) ? 'success' : 'error'}>{message}</div>
     <form onSubmit={onSaveNewEmployee}>
+      <div>
+        <label htmlFor='role'>Role</label>
+        <select name='role' id='role'>
+          <option>Select One</option>
+          <option value='Employee'>Employee</option>
+          <option value='Manager'>Manager</option>
+          <option value='Admin'>Admin</option>
+        </select>
+      </div>
       <div>
         <label htmlFor='name'>Name</label>
         <input type='text' name='name' id='name' />
@@ -23,15 +33,6 @@ const newView = ({ success, message, onSaveNewEmployee }) => (
       <div>
         <label htmlFor='password'>Password</label>
         <input type='password' name='password' id='password' />
-      </div>
-      <div>
-        <label htmlFor='role'>Role</label>
-        <select name='role' id='role'>
-          <option>Select One</option>
-          <option value='Employee'>Employee</option>
-          <option value='Manager'>Manager</option>
-          <option value='Admin'>Admin</option>
-        </select>
       </div>
       <div>
         <button>Save</button>
