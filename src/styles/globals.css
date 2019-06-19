@@ -13,3 +13,16 @@ a, .link {
 .container {
   margin-top: 2em;
 }
+
+input, select, textarea {
+  font-family: 'Open Sans', 'Cabin', 'Montserrat', 'Source Sans Pro', sans-serif;
+  font-size: .9em;
+  border-radius: .2em;
+  border: 1px solid #ccc;
+}
+
+select {
+  -webkit-appearance: none;
+  width: 33em;
+  padding: 1.4em;
+}
