@@ -36,6 +36,16 @@ class New extends Component {
         position: event.target.position.value
       }
     }, () => {
+      if (!this.validateEmployeeData()) {
+        this.setState({
+          success: false,
+          message: 'All fields are compulsory'
+        }, () => {
+        });
+
+        return;
+      }
+
       this.props.dispatch(newEmployeeAction({
         employee: this.state.employee,
         access: this.state.access
@@ -50,20 +60,26 @@ class New extends Component {
     event.target.position.value = '';
   }
 
+  validateEmployeeData() {
+    if (
+      !this.state.employee.name || 
+      !this.state.employee.email || 
+      !this.state.employee.username || 
+      !this.state.employee.password || 
+      !this.state.employee.role || 
+      !this.state.employee.position) {
+      return false;
+    }
+
+    return true;
+  }
+
   onFocus() {
     this.setState({ isShow: true });
   }
 
   onBlur() {
     this.setState({ isShow: false });
-  }
-
-  onSubmit(event) {
-    // 13 = enter
-    console.log(event.keyCode)
-    if (event.keyCode === 13) {
-      
-    }
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -89,7 +105,6 @@ class New extends Component {
         onSaveNewEmployee={this.onSaveNewEmployee.bind(this)}
         onFocus={this.onFocus.bind(this)}
         onBlur={this.onBlur.bind(this)}
-        onSubmit={this.onSubmit.bind(this)}
       />
     );
   }
