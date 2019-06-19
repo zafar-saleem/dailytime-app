@@ -48,6 +48,7 @@ table tbody tr {
 
 table tbody tr td {
   width: 15em;
+  text-align: left;
 }
 
 .actions {
