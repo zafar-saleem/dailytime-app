@@ -51,6 +51,10 @@ table tbody tr td {
   text-align: left;
 }
 
+table tbody tr.last {
+  border-bottom: 0px solid #000;
+}
+
 .actions {
   text-align: right;
 }

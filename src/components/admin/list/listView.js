@@ -23,8 +23,8 @@ class ListView extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.employees.map(li => (
-              <tr key={li._id}>
+            {this.props.employees.map((li, index) => (
+              <tr key={li._id} className={(this.props.employees.length - 1 == index) ? 'last' : 'none'}>
                 <td>
                   <Link className='name' to={`${this.props.match.path}/employees/details/${li._id}`}>{li.name}</Link>
                 </td>
