@@ -24,14 +24,14 @@ class Header extends Component {
             <li><Link to={`${this.props.match.path}/list`} className={(this.props.location.pathname.split('/')[2] === 'list') ? 'active' : 'inactive'}>Employees</Link></li>
             <li><Link to={`${this.props.match.path}/new`} className={(this.props.location.pathname.split('/')[2] === 'new') ? 'active' : 'inactive'}>New Employee</Link></li>
             <li><Link to={`${this.props.match.path}/profile`} className={(this.props.location.pathname.split('/')[2] === 'profile') ? 'active' : 'inactive'}>Profile</Link></li>
-            <li><Link to={`${this.props.match.path}/logout`} className={(this.props.location.pathname.split('/')[2] === 'logout') ? 'active' : 'inactive'}>Logout</Link></li>
+            <li><Link to={`${this.props.match.path}/logout`}>Logout</Link></li>
             <li className="last">Welcome {getCookie('role')}</li>
           </ul>
           :
           <ul className="navigation">
             <li><Link to={`${this.props.match.path}/home`} className={(this.props.location.pathname.split('/')[2] === 'home') ? 'active' : 'inactive'}>Home</Link></li>
             <li><Link to={`${this.props.match.path}/hours`} className={(this.props.location.pathname.split('/')[2] === 'hours') ? 'active' : 'inactive'}>File Hours</Link></li>
-            <li><Link to={`${this.props.match.path}/logout`} className={(this.props.location.pathname.split('/')[2] === 'logout') ? 'active' : 'inactive'}>Logout</Link></li>
+            <li><Link to={`${this.props.match.path}/logout`}>Logout</Link></li>
             <li className="last">Welcome {getCookie('role')}</li>
           </ul>
         }
