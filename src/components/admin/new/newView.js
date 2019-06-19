@@ -8,7 +8,7 @@ const newView = ({ success, message, onSaveNewEmployee, onFocus, onBlur, isShow,
       <div>
         <label htmlFor='role'>Role</label>
         <select name='role' id='role'>
-          <option>Select One</option>
+          <option>Select New Employee's Role</option>
           <option value='Employee'>Employee</option>
           <option value='Manager'>Manager</option>
           <option value='Admin'>Admin</option>
@@ -16,23 +16,23 @@ const newView = ({ success, message, onSaveNewEmployee, onFocus, onBlur, isShow,
       </div>
       <div>
         <label htmlFor='name'>Name</label>
-        <input type='text' name='name' id='name' />
+        <input type='text' name='name' id='name' placeholder='Enter New Employee Full Name' />
       </div>
       <div>
         <label htmlFor='email'>Email</label>
-        <input type='email' name='email' id='email' />
+        <input type='email' name='email' id='email' placeholder='Enter New Employee Email' />
       </div>
       <div>
         <label htmlFor='position'>Position</label>
-        <input type='text' name='position' id='position' />
+        <input type='text' name='position' id='position' placeholder='Enter New Employee Position such as Developer, CTO, CEO etc' />
       </div>
       <div>
         <label htmlFor='username'>Username</label>
-        <input type='text' name='username' id='username' />
+        <input type='text' name='username' id='username' placeholder='Enter New Employee Username' />
       </div>
       <div>
         <label htmlFor='password'>Password</label>
-        <input type='password' name='password' id='password' onClick={onFocus} onBlur={onBlur} onKeyDown={onSubmit} />
+        <input type='password' name='password' id='password' placeholder='Enter New Employee Password' onClick={onFocus} onBlur={onBlur} onKeyDown={onSubmit} />
         <span className={(isShow) ? 'action-indicator show' : 'action-indicator hide'}>Enter Password & Hit Enter to Save</span>
       </div>
       <div>
