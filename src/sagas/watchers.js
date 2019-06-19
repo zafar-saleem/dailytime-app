@@ -6,6 +6,7 @@ import { detailSaga } from './admin/detailSaga';
 import { profileSaga } from './admin/profileSaga';
 import { hoursSaga } from './employees/hoursSaga';
 import { updateSaga } from './admin/updateSaga';
+import { deleteEmployeeSaga } from './admin/deleteEmployeeSaga';
 
 import * as types from '../actions';
 
@@ -19,4 +20,5 @@ export default function* watchUserAuthentication() {
   yield takeLatest(types.ON_FILE_MY_HOURS, hoursSaga);
   yield takeLatest(types.FETCH_EMPLOYEE_DETAILS, detailSaga);
   yield takeLatest(types.UPDATE_EMPLOYEE_DETAILS, updateSaga);
+  yield takeLatest(types.ON_DELETE_EMPLOYEE, deleteEmployeeSaga);
 }

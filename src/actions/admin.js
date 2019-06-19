@@ -32,3 +32,10 @@ export const employeeUpdateAction = (id) => {
     id
   }
 };
+
+export const employeeDeleteAction = (id) => {
+  return {
+    type: types.ON_DELETE_EMPLOYEE,
+    id
+  }
+};

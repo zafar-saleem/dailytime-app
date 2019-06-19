@@ -6,7 +6,8 @@ import Dialog from '../../common/dialog/dialog';
 
 import {
   employeesListAction,
-  employeeUpdateAction
+  employeeUpdateAction,
+  employeeDeleteAction
 } from '../../../actions/admin';
 
 
@@ -72,6 +73,12 @@ class List extends Component {
     }));
   }
 
+  onDeleteHandle(id) {
+    this.props.dispatch(employeeDeleteAction({
+      id: id
+    }));
+  }
+
   render() {
     if (this.state.employees === undefined || this.state.employees.length === 0) {
       return <div>No Employees</div>
@@ -85,6 +92,7 @@ class List extends Component {
           employees={this.state.employees}
           match={match}
           onUpdateHandle={this.onUpdateHandle.bind(this)}
+          onDeleteHandle={this.onDeleteHandle.bind(this)}
         />
         <Dialog
           onShow={this.state.isDialog}
