@@ -39,7 +39,7 @@ class New extends Component {
       if (!this.validateEmployeeData()) {
         this.setState({
           success: false,
-          message: 'All fields are compulsory'
+          message: 'All fields are mandatory'
         }, () => {
         });
 
