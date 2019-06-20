@@ -56,7 +56,7 @@ class Hours extends Component {
 
   render() {
     return (
-      <div className="hours-container">
+      <div className="hours-container container">
         <div className={(this.state.success) ? 'success' : 'error'}>{this.state.message}</div>
         <form onSubmit={this.onFileHours.bind(this)}>
           <div>
