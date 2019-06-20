@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 const profileView = ({ profile }) => (
   <div className="container">
     <table>
-      <thead>
-        <tr>
-          <th>
-            Username
-          </th>
-          <th>
-            Role
-          </th>
-        </tr>
-      </thead>
       <tbody>
-        {profile.map(item => (
-          <tr key={item._id}>
-            <td>{item.username}</td>
-            <td>{item.role}</td>
-          </tr>
-          ))}
+        <tr>
+          <th>Username</th><td className='uppercase'>{profile.username}</td>
+        </tr>
+        <tr>
+          <th>Role</th><td className='uppercase'>{profile.role}</td>
+        </tr>
+        <tr>
+          <th>Email</th><td className='uppercase'>{profile.email}</td>
+        </tr>
+        <tr>
+          <th>Password</th><td className='uppercase'>********</td>
+        </tr>
+        <tr className="last">
+          <Link to="" className="right">Edit</Link>
+        </tr>
       </tbody>
     </table>
   </div>

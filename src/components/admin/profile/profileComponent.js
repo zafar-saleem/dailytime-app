@@ -33,7 +33,7 @@ class Profile extends Component {
       return <div>No Profile Found</div>
     }
     return (
-      <ProfileView profile={this.state.profile} />
+      <ProfileView profile={this.state.profile[0]} />
     );
   }
 }
