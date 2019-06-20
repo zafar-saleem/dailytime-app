@@ -17,3 +17,18 @@
 .top {
   vertical-align: top;
 }
+
+.hours-container .action-indicator {
+  display: inline-block;
+  margin-left: 1em;
+  font-size: .8em;
+  color: #CCC;
+}
+
+.hours-container .show {
+  visibility: visible;
+}
+
+.hours-container .hide {
+  visibility: hidden;
+}

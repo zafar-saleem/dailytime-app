@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HoursView = ({ success, message, onFileHours }) => (
+const HoursView = ({ success, message, onFileHours, isShow, onBlur, onFocus }) => (
   <div className="hours-container container">
     <div className={(success) ? 'success' : 'error'}>{message}</div>
     <form onSubmit={onFileHours}>
@@ -18,10 +18,11 @@ const HoursView = ({ success, message, onFileHours }) => (
       </div>
       <div>
         <label className="top" htmlFor="tasks">List of Tasks</label>
-        <textarea cols="40" rows="10" name="tasks" id="tasks"></textarea>
+        <textarea cols="40" rows="10" name="tasks" id="tasks" onClick={onFocus} onBlur={onBlur}></textarea>
+        <span className={(isShow) ? 'action-indicator show' : 'action-indicator hide'}>Enter Password & Hit Enter to Save</span>
       </div>
       <div>
-        <button>File My Hours</button>
+        <button className="hidden">File My Hours</button>
       </div>
     </form>
   </div>

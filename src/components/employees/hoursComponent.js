@@ -19,7 +19,8 @@ class Hours extends Component {
       token: getCookie('token')
     },
     success: undefined,
-    message: undefined
+    message: undefined,
+    isShow: false
   }
 
   onFileHours = event => {
@@ -42,7 +43,6 @@ class Hours extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps)
     if (nextProps.hoursReducer.hasOwnProperty('response')) {
       return {
         success: nextProps.hoursReducer.response.success,
@@ -56,12 +56,23 @@ class Hours extends Component {
     }
   }
 
+  onFocus() {
+    this.setState({ isShow: true });
+  }
+
+  onBlur() {
+    this.setState({ isShow: false });
+  }
+
   render() {
     return (
       <HoursView 
         success={this.state.success}
         message={this.state.message}
-        onFileHours={this.onFileHours.bind(this)} />
+        onFileHours={this.onFileHours.bind(this)}
+        isShow={this.state.isShow}
+        onBlur={this.onBlur.bind(this)}
+        onFocus={this.onFocus.bind(this)} />
     )
   }
 }
