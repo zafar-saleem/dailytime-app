@@ -32,7 +32,7 @@ const newView = ({ success, message, onSaveNewEmployee, onFocus, onBlur, isShow,
       </div>
       <div>
         <label htmlFor='password'>Password</label>
-        <input type='password' name='password' id='password' placeholder='Enter New Employee Password' onClick={onFocus} onBlur={onBlur} onKeyDown={onSubmit} />
+        <input type='password' name='password' id='password' placeholder='Enter New Employee Password' onClick={onFocus} onBlur={onBlur} />
         <span className={(isShow) ? 'action-indicator show' : 'action-indicator hide'}>Enter Password & Hit Enter to Save</span>
       </div>
       <div>
