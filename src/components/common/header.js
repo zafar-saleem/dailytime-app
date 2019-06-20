@@ -14,6 +14,10 @@ import { getCookie } from '../../utils/cookies';
 import './header.css';
 
 class Header extends Component {
+  componentDidMount() {
+    document.title = 'Daily Time';
+  }
+
   render() {
     return (
       <div className="main-container">

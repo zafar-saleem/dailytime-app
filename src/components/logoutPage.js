@@ -10,6 +10,10 @@ class Logout extends Component {
     setCookie('name', null, 0);
     setCookie('id', null, 0);
   }
+
+  componentDidMount() {
+    document.title = 'Daily Time';
+  }
   
   render() {
     return(

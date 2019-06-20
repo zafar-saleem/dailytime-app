@@ -8,6 +8,10 @@ import { setCookie, getCookie } from '../utils/cookies';
 import './authentication.css';
 
 class LoginPage extends Component {
+  componentDidMount() {
+    document.title = 'Daily Time';
+  }
+  
   onHandleLogin = (event) => {
     event.preventDefault();
 
