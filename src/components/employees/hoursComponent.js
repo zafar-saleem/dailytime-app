@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { fileHoursAction } from '../../actions/employees';
 import { connect } from 'react-redux';
 import { getCookie } from '../../utils/cookies';
+import HoursView from './hoursView';
 
 import './hours.css';
 
@@ -41,6 +42,7 @@ class Hours extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
+    console.log(nextProps)
     if (nextProps.hoursReducer.hasOwnProperty('response')) {
       return {
         success: nextProps.hoursReducer.response.success,
@@ -56,30 +58,10 @@ class Hours extends Component {
 
   render() {
     return (
-      <div className="hours-container container">
-        <div className={(this.state.success) ? 'success' : 'error'}>{this.state.message}</div>
-        <form onSubmit={this.onFileHours.bind(this)}>
-          <div>
-            <label htmlFor="date">Date</label>
-            <input type="date" name="date" id="date" />
-          </div>
-          <div>
-            <label htmlFor="start-time">Start Time</label>
-            <input type="time" name="startTime" id="start-time" />
-          </div>
-          <div>
-            <label htmlFor="finish-time">Finish Time</label>
-            <input type="time" name="finishTime" id="finish-time" />
-          </div>
-          <div>
-            <label className="top" htmlFor="tasks">List of Tasks</label>
-            <textarea cols="40" rows="10" name="tasks" id="tasks"></textarea>
-          </div>
-          <div>
-            <button>File My Hours</button>
-          </div>
-        </form>
-      </div>
+      <HoursView 
+        success={this.state.success}
+        message={this.state.message}
+        onFileHours={this.onFileHours.bind(this)} />
     )
   }
 }
