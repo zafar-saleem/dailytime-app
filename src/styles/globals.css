@@ -33,3 +33,15 @@ select {
   padding: 1.4em;
   background: #FFFFFF;
 }
+
+.success {
+  color: green;
+  adding: 2em;
+  padding-left: 8em;
+}
+
+.error {
+  color: red;
+  padding-bottom: 2em;
+  padding-left: 8em;
+}

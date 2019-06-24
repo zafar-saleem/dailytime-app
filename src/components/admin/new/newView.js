@@ -3,8 +3,8 @@ import './new.css';
 
 const newView = ({ success, message, onSaveNewEmployee, onFocus, onBlur, isShow, onSubmit }) => (
   <div className="container new-container">
-    <div className={(success) ? 'success' : 'error'}>{message}</div>
     <form onSubmit={onSaveNewEmployee}>
+      <div className={(success) ? 'success' : 'error'}>{message}</div>
       <div>
         <label htmlFor='role'>Role</label>
         <select name='role' id='role'>
