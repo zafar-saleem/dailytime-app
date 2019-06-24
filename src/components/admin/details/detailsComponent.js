@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import { employeeDetailsAction } from '../../../actions/admin';
+import PropTypes from 'prop-types'
 
 import DetailsView from './detailsView';
 import './details.css';
@@ -9,6 +9,10 @@ import './details.css';
 class Details extends Component {
   state = {
     details: undefined
+  }
+
+  static contextTypes = {
+    router: PropTypes.object
   }
 
   componentDidMount() {
@@ -30,6 +34,7 @@ class Details extends Component {
   }
 
   onHandleClose() {
+    this.context.router.history.push(`/admin/list`);
   }
 
   render() {
@@ -41,7 +46,7 @@ class Details extends Component {
       <DetailsView
         employee={this.state.details.user}
         hours={this.state.details.hours}
-        show={this.state.show}
+        props={this.props}
         onHandleClose={this.onHandleClose.bind(this)}
       />
     );
