@@ -6,19 +6,19 @@ const profileView = ({ profile }) => (
     <table>
       <tbody>
         <tr>
-          <th>Username</th><td className='uppercase'>{profile.username}</td>
+          <th>Username:</th><td className='uppercase'>{profile.username}</td>
         </tr>
         <tr>
-          <th>Role</th><td className='uppercase'>{profile.role}</td>
+          <th>Role:</th><td className='uppercase'>{profile.role}</td>
         </tr>
         <tr>
-          <th>Email</th><td className='uppercase'>{profile.email}</td>
+          <th>Email:</th><td className='uppercase'>{profile.email}</td>
         </tr>
         <tr>
-          <th>Password</th><td className='uppercase'>********</td>
+          <th>Password:</th><td className='uppercase'>********</td>
         </tr>
         <tr className="last">
-          <Link to="" className="right">Edit</Link>
+          <th><Link to="" className="right">Edit</Link></th>
         </tr>
       </tbody>
     </table>
