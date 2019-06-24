@@ -20,7 +20,6 @@ table tbody tr {
 table thead,
 table tbody {
   border-radius: .19em;
-  border: .1em solid #9b9c9d;
 }
 
 table {
@@ -28,6 +27,7 @@ table {
 }
 
 table thead {
+  background-color: #bebaba;
   margin-bottom: .3em;
 }
 
@@ -41,9 +41,8 @@ table thead tr th {
   font-weight: normal;
 }
 
-table tbody tr {
-  width: 98%;
-  border-bottom: .1em solid #9b9c9d;
+table tbody tr:nth-child(even) {
+  background-color: #f0eeee;
 }
 
 table tbody tr td {
