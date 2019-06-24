@@ -27,8 +27,8 @@ form {
   width: stretch;
   padding: 1em 1.5em;
   margin-bottom: 1.5em;
-  border-radius: .2em;
-  border: 1px solid #cbcccd;
+  border: 0px solid #cbcccd;
+  border-bottom: 1px solid #cbcccd;
   /*background-color: #d9dbdc;*/
 }
 

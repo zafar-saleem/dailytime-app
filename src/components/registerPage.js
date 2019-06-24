@@ -33,16 +33,13 @@ class RegisterPage extends Component {
         {!isSuccess ? <div className="error">{message}</div> : <Redirect to='login' />}
         <form onSubmit={this.onHandleRegistration}>
           <div>
-            <label className="labels" htmlFor="name">Name</label>
-            <input type="text" name="name" className="fields" id="name" />
+            <input type="text" name="name" className="fields" id="name" placeholder="Fullname" />
           </div>
           <div>
-            <label className="labels" htmlFor="username">Username</label>
-            <input type="text" name="username" className="fields" id="username" />
+            <input type="text" name="username" className="fields" id="username" placeholder="Username" />
           </div>
           <div>
-            <label className="labels" htmlFor="password">Password</label>
-            <input type="password" name="password" className="fields" id="password" />
+            <input type="password" name="password" className="fields" id="password" placeholder="Password" />
           </div>
           <div>
             <button className="btn btn-register">Register</button>
