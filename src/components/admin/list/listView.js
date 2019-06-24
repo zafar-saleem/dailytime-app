@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Link
-} from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 import './list.css';
 
@@ -38,7 +33,7 @@ class ListView extends Component {
                   {li.position}
                 </td>
                 <td className="actions">
-                  <button className="links link" onClick={() => this.props.onUpdateHandle({ id: li._id, name: li.name, username: li.username, email: li.email, position: li.position })}>Update</button>
+                  <button className="links link" onClick={() => this.props.onUpdateHandle({ id: li._id, name: li.name, username: li.username, email: li.email, position: li.position })}>Edit</button>
                   <button className="links link" onClick={() => this.props.onDeleteHandle(li._id)}>Delete</button>
                 </td>
               </tr>
