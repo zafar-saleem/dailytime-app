@@ -2,7 +2,11 @@ a, .link {
   cursor: pointer;
   color: #37c5fc;
   text-decoration: none;
-  border: 1px solid #fff;
+}
+
+.link {
+  background: transparent;
+  border: 0px solid #fff;
 }
 
 .links {
