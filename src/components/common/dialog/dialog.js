@@ -8,12 +8,20 @@ class Dialog extends Component {
       return <div></div>
     }
 
+    let success, message;
+
+    if (this.props.props.updateEmployeeReducer.hasOwnProperty('response')) {
+      success = this.props.props.updateEmployeeReducer.response.success;
+      message = this.props.props.updateEmployeeReducer.response.message;
+    }
+
     return (
       <div>
         <div className={(this.props.onShow) ? 'backdrop show' : 'backdrop hide'} onClick={this.props.onHandleClose}></div>
         <div className={(this.props.onShow) ? 'dialog show' : 'dialog hide'}>
           <button className='btn btn-close' onClick={this.props.onHandleClose}>close</button>
           <form onSubmit={this.props.onHandleAction}>
+            <div className={(success) ? 'success' : 'error'}>{message}</div>
             <div>
               <label htmlFor='name'>Name</label>
               <input type='text' name='name' id='name' defaultValue={this.props.employee.name} />

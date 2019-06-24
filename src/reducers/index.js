@@ -7,6 +7,7 @@ import profileReducer from './admin/profileReducer';
 import hoursReducer from './employees/hoursReducer';
 import detailsReducer from './admin/detailsReducer';
 import deleteEmployeeReducer from './admin/deleteEmployeeReducer';
+import updateEmployeeReducer from './admin/updateEmployeeReducer';
 
 const rootReducer = combineReducers({
   register,
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
   profileReducer,
   hoursReducer,
   detailsReducer,
-  deleteEmployeeReducer
+  deleteEmployeeReducer,
+  updateEmployeeReducer
 });
 
 export default rootReducer;

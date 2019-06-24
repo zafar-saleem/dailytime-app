@@ -69,7 +69,9 @@ class List extends Component {
   }
 
   onHandleClose() {
-    this.setState({ isDialog: false });
+    this.setState({ isDialog: false }, () => {
+      window.location.reload();
+    });
   }
 
   onDeleteHandle(id) {
@@ -79,6 +81,7 @@ class List extends Component {
   }
 
   render() {
+    // console.log(this.props);
     if (this.state.employees === undefined || this.state.employees.length === 0) {
       return <div>No Employees</div>
     }
