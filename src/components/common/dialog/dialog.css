@@ -17,3 +17,12 @@
   width: 30em;
   padding: 1.5em;
 }
+
+.dialog .btn-close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  color: red;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
