@@ -26,8 +26,12 @@
   border: 0px solid #fff;
 }
 
+.navigation li a:hover {
+  background-color: #f8f6f6;
+}
+
 .navigation li a.active {
-  background-color: #e4e1e1;
+  background-color: #e9e6e6;
 }
 
 /*.navigation li a.active:after {
