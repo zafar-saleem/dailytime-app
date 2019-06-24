@@ -5,3 +5,15 @@
 .hide {
   display: none;
 }
+
+.dialog form label {
+  display: inline-block;
+  width: 6em;
+  padding: 1em;
+  margin-bottom: 3em;
+}
+
+.dialog form input {
+  width: 30em;
+  padding: 1.5em;
+}

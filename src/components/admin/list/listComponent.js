@@ -68,6 +68,10 @@ class List extends Component {
     }));
   }
 
+  onHandleClose() {
+    this.setState({ isDialog: false });
+  }
+
   onDeleteHandle(id) {
     this.props.dispatch(employeeDeleteAction({
       id: id
@@ -93,6 +97,8 @@ class List extends Component {
           onShow={this.state.isDialog}
           employee={this.state.employee}
           onHandleAction={this.onHandleUpdateEmployee.bind(this)}
+          onHandleClose={this.onHandleClose.bind(this)}
+          props={this.props}
         />
       </div>
     );

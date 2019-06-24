@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './dialog.css';
 
 class Dialog extends Component {
+
   render() {
     if (this.props.employee === undefined) {
       return <div></div>
@@ -9,6 +10,7 @@ class Dialog extends Component {
 
     return (
       <div>
+        <div className={(this.props.onShow) ? 'backdrop show' : 'backdrop hide'} onClick={this.props.onHandleClose}></div>
         <div className={(this.props.onShow) ? 'dialog show' : 'dialog hide'}>
           <form onSubmit={this.props.onHandleAction}>
             <div>
@@ -29,7 +31,7 @@ class Dialog extends Component {
             </div>
             <div>
               <label htmlFor='password'>Password</label>
-              <input type='password' name='password' id='password' defaultValue={this.props.employee.password} />
+              <input type='password' name='password' id='password' defaultValue='********' />
             </div>
             <div>
               <label htmlFor='role'>Role</label>
