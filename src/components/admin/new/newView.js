@@ -7,7 +7,7 @@ const newView = ({ success, message, onSaveNewEmployee, onFocus, onBlur, isShow,
       <div className={(success) ? 'success' : 'error'}>{message}</div>
       <div>
         <label htmlFor='role'>Role</label>
-        <select name='role' id='role'>
+        <select name='role' id='role' autoFocus>
           <option>Select New Employee's Role</option>
           <option value='Employee'>Employee</option>
           <option value='Manager'>Manager</option>
@@ -32,7 +32,7 @@ const newView = ({ success, message, onSaveNewEmployee, onFocus, onBlur, isShow,
       </div>
       <div>
         <label htmlFor='password'>Password</label>
-        <input type='password' name='password' id='password' placeholder='Enter New Employee Password' onClick={onFocus} onBlur={onBlur} />
+        <input type='password' name='password' id='password' placeholder='Enter New Employee Password' onClick={onFocus} onFocus={onFocus} onBlur={onBlur} />
         <span className={(isShow) ? 'action-indicator show' : 'action-indicator hide'}>Enter Password & Hit Enter to Save</span>
       </div>
       <div>

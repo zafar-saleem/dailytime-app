@@ -3,6 +3,20 @@ import './dialog.css';
 
 class Dialog extends Component {
 
+  state = {
+    isDialog: false,
+    isShow: false
+  }
+
+  onFocus() {
+    console.log('aksjhdkajsdh')
+    this.setState({ isShow: true });
+  }
+
+  onBlur() {
+    this.setState({ isShow: false });
+  }
+
   render() {
     if (this.props.employee === undefined) {
       return <div></div>
@@ -23,6 +37,15 @@ class Dialog extends Component {
           <form onSubmit={this.props.onHandleAction}>
             <div className={(success) ? 'success' : 'error'}>{message}</div>
             <div>
+              <label htmlFor='role'>Role</label>
+              <select name='role' id='role' defaultValue={this.props.employee.role}>
+                <option>Select One</option>
+                <option value='Employee'>Employee</option>
+                <option value='Manager'>Manager</option>
+                <option value='Admin'>Admin</option>
+              </select>
+            </div>
+            <div>
               <label htmlFor='name'>Name</label>
               <input type='text' name='name' id='name' defaultValue={this.props.employee.name} />
             </div>
@@ -40,19 +63,11 @@ class Dialog extends Component {
             </div>
             <div>
               <label htmlFor='password'>Password</label>
-              <input type='password' name='password' id='password' defaultValue='********' />
+              <input type='password' name='password' id='password' defaultValue='********' onClick={this.onFocus.bind(this)} onFocus={this.onFocus.bind(this)} onBlur={this.onBlur.bind(this)} />
+              <span className={(this.state.isShow) ? 'action-indicator show' : 'action-indicator hide'}>Enter Password & Hit Enter to Update</span>
             </div>
             <div>
-              <label htmlFor='role'>Role</label>
-              <select name='role' id='role' defaultValue={this.props.employee.role}>
-                <option>Select One</option>
-                <option value='Employee'>Employee</option>
-                <option value='Manager'>Manager</option>
-                <option value='Admin'>Admin</option>
-              </select>
-            </div>
-            <div>
-              <button>Update {this.props.employee.name}</button>
+              <button className='hidden'>Update {this.props.employee.name}</button>
             </div>
           </form>
         </div>

@@ -26,3 +26,18 @@
   cursor: pointer;
   border: 1px solid #fff;
 }
+
+.dialog .action-indicator {
+  display: inline-block;
+  margin-left: 1em;
+  font-size: .8em;
+  color: #CCC;
+}
+
+.dialog .show {
+  visibility: visible;
+}
+
+.dialog .hide {
+  visibility: hidden;
+}
