@@ -32,7 +32,7 @@ class ListView extends Component {
                   <Link className='name' to={`${this.props.match.path}/employees/details/${li._id}`}>{li.username}</Link>
                 </td>
                 <td>
-                  <Link className='name' to={`${this.props.match.path}/employees/details/${li._id}`}>{li.email}</Link>
+                  {li.email}
                 </td>
                 <td className='uppercase'>
                   {li.position}
