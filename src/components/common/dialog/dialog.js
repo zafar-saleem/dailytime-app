@@ -12,7 +12,7 @@ class Dialog extends Component {
       <div>
         <div className={(this.props.onShow) ? 'backdrop show' : 'backdrop hide'} onClick={this.props.onHandleClose}></div>
         <div className={(this.props.onShow) ? 'dialog show' : 'dialog hide'}>
-          <button className='btn btn-close'>close</button>
+          <button className='btn btn-close' onClick={this.props.onHandleClose}>close</button>
           <form onSubmit={this.props.onHandleAction}>
             <div>
               <label htmlFor='name'>Name</label>
