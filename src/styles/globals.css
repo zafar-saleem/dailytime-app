@@ -36,7 +36,7 @@ select {
 
 .success {
   color: green;
-  adding: 2em;
+  padding-bottom: 2em;
   padding-left: 8em;
 }
 
