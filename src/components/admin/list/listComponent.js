@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Details from '../details/detailsComponent';
 import ListView from './listView';
 import Dialog from '../../common/dialog/dialog';
 
@@ -18,10 +17,6 @@ class List extends Component {
     message: undefined,
     isDialog: false,
     employee: undefined
-  }
-
-  constructor(props) {
-    super(props);
   }
 
   componentDidMount() {
