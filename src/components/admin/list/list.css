@@ -27,7 +27,7 @@ table {
 }
 
 table thead {
-  background-color: #bebaba;
+  background-color: #9ea1a1;
   margin-bottom: .3em;
 }
 
@@ -42,7 +42,7 @@ table thead tr th {
 }
 
 table tbody tr:nth-child(even) {
-  background-color: #f0eeee;
+  background-color: #d7d9d9;
 }
 
 table tbody tr td {
