@@ -38,7 +38,7 @@ table thead tr {
 table thead tr th {
   width: 15em;
   text-align: left;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 table tbody tr:nth-child(even) {
