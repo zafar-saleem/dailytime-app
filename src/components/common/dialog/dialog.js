@@ -34,6 +34,7 @@ class Dialog extends Component {
         <div className={(this.props.onShow) ? 'backdrop show' : 'backdrop hide'} onClick={this.props.onHandleClose}></div>
         <div className={(this.props.onShow) ? 'dialog show' : 'dialog hide'}>
           <button className='btn btn-close' onClick={this.props.onHandleClose}>close</button>
+          <span className='user-info'>Hit Enter to Finish Updating {this.props.employee.name}'s profile.</span>
           <form onSubmit={this.props.onHandleAction}>
             <div className={(success) ? 'success' : 'error'}>{message}</div>
             <div>
@@ -64,7 +65,6 @@ class Dialog extends Component {
             <div>
               <label htmlFor='password'>Password</label>
               <input type='password' name='password' id='password' defaultValue='********' onClick={this.onFocus.bind(this)} onFocus={this.onFocus.bind(this)} onBlur={this.onBlur.bind(this)} />
-              <span className={(this.state.isShow) ? 'action-indicator show' : 'action-indicator hide'}>Enter Password & Hit Enter to Update</span>
             </div>
             <div>
               <button className='hidden'>Update {this.props.employee.name}</button>
