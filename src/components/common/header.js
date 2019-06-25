@@ -21,6 +21,7 @@ class Header extends Component {
   render() {
     return (
       <div className="main-container">
+        <Link to='list' className='logo'></Link>
         {
           (getCookie('role') === 'Admin')
           ?
