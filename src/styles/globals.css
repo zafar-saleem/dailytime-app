@@ -34,6 +34,20 @@ select {
   background: #FFFFFF;
 }
 
+label {
+  color: #b2b4b4;
+  font-size: .9em;
+  text-align: right;
+}
+
+.user-info {
+  display: block;
+  padding: 0em 0em 2em 8em;
+  color: #b2b4b4;
+  font-size: .9em;
+}
+
+
 .success {
   color: #74f259;
   padding-bottom: 2em;
