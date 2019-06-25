@@ -7,7 +7,18 @@
   left: 0;
   width: 300px;
   height: 500px;
+  text-align: -webkit-center;
   border-radius: 3px;
+}
+
+.auth-container .logo {
+  display: block;
+  top: 5px;
+  left: 2em;
+  width: 128px;
+  height: 128px;
+  z-index: 10;
+  background: url(./assets/logo.png) no-repeat;
 }
 
 .page-title {
