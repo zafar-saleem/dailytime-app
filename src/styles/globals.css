@@ -35,13 +35,17 @@ select {
 }
 
 .success {
-  color: green;
+  color: #74f259;
   padding-bottom: 2em;
   padding-left: 8em;
 }
 
 .error {
-  color: red;
+  color: #f91e5c;
   padding-bottom: 2em;
   padding-left: 8em;
+}
+
+.danger {
+  color: #fb6791;
 }
