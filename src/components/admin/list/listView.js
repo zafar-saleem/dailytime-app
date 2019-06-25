@@ -34,7 +34,7 @@ class ListView extends Component {
                 </td>
                 <td className="actions">
                   <button className="links link" onClick={() => this.props.onUpdateHandle({ id: li._id, name: li.name, username: li.username, email: li.email, position: li.position })}>Edit</button>
-                  <button className="links link" onClick={() => this.props.onDeleteHandle(li._id)}>Delete</button>
+                  <button className="links link danger" onClick={() => this.props.onDeleteHandle(li._id)}>Delete</button>
                 </td>
               </tr>
             ))}
