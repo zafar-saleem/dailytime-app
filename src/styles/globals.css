@@ -20,6 +20,10 @@ a, .link {
   margin: 2em auto;
 }
 
+form {
+  text-align: center;
+}
+
 input, select, textarea {
   font-family: 'Open Sans', 'Cabin', 'Montserrat', 'Source Sans Pro', sans-serif;
   font-size: .9em;
@@ -42,9 +46,10 @@ label {
 
 .user-info {
   display: block;
-  padding: 0em 0em 2em 8em;
+  padding: 0em 0em 2em 25em;
   color: #b2b4b4;
   font-size: .9em;
+  text-align: left;
 }
 
 
